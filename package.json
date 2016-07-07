@@ -1,0 +1,11 @@
+{
+  "name" : "blip-challenge",
+  "version" : "0.0.1",
+  "scripts" : {
+    "start" : "nodemon Server.js"
+  },
+  "dependencies" : {
+    "express" : "latest",
+    "nodemon" : "latest"
+  }
+}
