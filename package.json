@@ -5,6 +5,7 @@
     "start" : "nodemon Server.js"
   },
   "dependencies" : {
-    "express" : "4.14.0"
+    "express" : "4.14.0",
+    "yql"	  : "1.0.2"
   }
 }
