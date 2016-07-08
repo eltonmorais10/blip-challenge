@@ -5,7 +5,6 @@
     "start" : "nodemon Server.js"
   },
   "dependencies" : {
-    "express" : "latest",
-    "nodemon" : "latest"
+    "express" : "4.14.0"
   }
 }
