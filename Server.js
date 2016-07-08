@@ -28,14 +28,7 @@ router.get('/forecast', function(req, res){
 		} else {
 			res.send(JSON.stringify({"status" : "ok", "data" : data}));
 		}
-		/*
-		var location = data.query.results.channel.location;
-	  	var condition = data.query.results.channel.item.condition;
-	  
-	  	console.log("condition" + condition);
-	  	console.log('The current weather in ' + location.city + ', ' + location.region + ' is ' + condition.temp + ' degrees.');*/
 	});
-	//console.log('body: ' + + JSON.stringify(req.body));
 });
 
 app.use("/",router);
