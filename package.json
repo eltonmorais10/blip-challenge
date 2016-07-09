@@ -3,11 +3,16 @@
   "version" : "0.0.1",
   "scripts" : {
     "start" : "nodemon Server.js",
-    "test"  : "mocha test.js"
+    "test"  : "mocha test.js",
+    "watch" : "gulp watch"
   },
   "dependencies" : {
     "express" : "4.14.0",
-    "yql"	  : "1.0.2",
+    "yql"	  : "1.0.2"
+  },
+  "devDependencies" : {
+  	"gulp"	  : "3.8.11",
+  	"gulp-mocha" : "2.0.1",
     "mocha"	  : "2.2.4"
   }
 }

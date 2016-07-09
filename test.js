@@ -4,7 +4,7 @@ var http = require("http");
 // UNIT test begin
 describe("Connection to the application", function() {
 	// increaste the test timeout, 
-	// because do to the internet connection it can last long
+	// because due to the internet connection it can last long
 	this.timeout(5000);
 
 	// test connection to the Application
