@@ -2,10 +2,12 @@
   "name" : "blip-challenge",
   "version" : "0.0.1",
   "scripts" : {
-    "start" : "nodemon Server.js"
+    "start" : "nodemon Server.js",
+    "test"  : "mocha test.js"
   },
   "dependencies" : {
     "express" : "4.14.0",
-    "yql"	  : "1.0.2"
+    "yql"	  : "1.0.2",
+    "mocha"	  : "2.2.4"
   }
 }
