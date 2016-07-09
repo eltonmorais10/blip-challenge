@@ -22,6 +22,7 @@ $(function(){
                     } else {
                         var location = data["data"]["query"]["results"]["channel"]["location"];
                         var conditions = data["data"]["query"]["results"]["channel"]["item"];
+                        var forecast = conditions["forecast"];
 
                         $("#forecast-notifications").html("");
 
@@ -29,9 +30,19 @@ $(function(){
                         $("#region").text(location.region);
                         $("#city").text(location.city);
 
-                        $("#temperature-now").text(parseInt((conditions["condition"]["temp"]-32)*5/9));
+                        $("#temperature-now").text(convertFahrenheitToDegrees(conditions["condition"]["temp"]));
                         $("#weather-now-img").attr("src","http://l.yimg.com/a/i/us/we/52/" + conditions["condition"]["code"] + ".gif");
-                        $("#test").html(conditions["description"]);
+
+                        var index = 0;
+                        $(".forecast").each(function(){
+                            $(this).find(".forecast-day").text(forecast[index]["day"] + " - " + forecast[index]["date"]);
+                            $(this).find(".forecast-temp-high").text(convertFahrenheitToDegrees(forecast[index]["high"]));
+                            $(this).find(".forecast-temp-low").text(convertFahrenheitToDegrees(forecast[index]["low"]));
+                            $(this).find(".forecast-condition").text(forecast[index]["text"]);
+                            $(this).find(".forecast-img").attr("src", "http://l.yimg.com/a/i/us/we/52/" + forecast[index]["code"] + ".gif");
+
+                            index++;
+                        });
 
                         $("#results-container").css("display", "inherit");
                     }
@@ -47,3 +58,7 @@ $(function(){
     });
 
 });
+
+function convertFahrenheitToDegrees(val) {
+    return parseInt((val-32)*5/9);
+}

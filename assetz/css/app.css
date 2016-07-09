@@ -97,10 +97,30 @@ input[type="submit"]:hover {
 	color: #777;
 }
 
-#test {
+#forecast-next-days {
+	width: 100%;
+	float: left;
+	overflow: auto;
+	padding-top: 50px;
+}
+
+.forecast {
+	width: 20%;
+	float: left;
+	text-align: center;
+}
+
+.forecast div {
 	width: 100%;
 	float: left;
 }
+
+.forecast-day {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+
 
 @media (max-width: 600px) {
 	.location {
