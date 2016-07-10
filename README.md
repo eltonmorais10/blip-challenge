@@ -6,6 +6,10 @@ JS application build to amaze BLIP.
 Web application that given a location (e.g. Porto) fetches the weather forecast for the next 5 days. 
 To achieve the result it was proposed to use the Yahoo API.
 
+# How I built it
+The application was built on Node.js. 
+With the help of Express.js it was built two routes, one to the main page and another to the city's forecast data fetch, this last one is used for an AJAX call on the main page.
+
 ## How to run it
 To run the application:
 - First you need to make sure that you install Node.js: https://nodejs.org/en/download/
