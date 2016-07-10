@@ -12,7 +12,7 @@ $(function(){
             $.ajax({
                 type: 'GET',
                 contentType: 'application/json',
-                url: 'http://localhost:4000/forecast?city=' + city,                      
+                url: '/forecast?city=' + city,                      
                 success: function(data) {
                     data = JSON.parse(data);
                     console.log(data);
@@ -31,7 +31,7 @@ $(function(){
                         $("#city").text(location.city);
 
                         $("#temperature-now").text(convertFahrenheitToDegrees(conditions["condition"]["temp"]));
-                        $("#weather-now-img").attr("src","http://l.yimg.com/a/i/us/we/52/" + conditions["condition"]["code"] + ".gif");
+                        $("#weather-now-img").attr("src","/img/" + conditions["condition"]["code"] + ".gif");
 
                         var index = 0;
                         $(".forecast").each(function(){
@@ -39,7 +39,7 @@ $(function(){
                             $(this).find(".forecast-temp-high").text(convertFahrenheitToDegrees(forecast[index]["high"]));
                             $(this).find(".forecast-temp-low").text(convertFahrenheitToDegrees(forecast[index]["low"]));
                             $(this).find(".forecast-condition").text(forecast[index]["text"]);
-                            $(this).find(".forecast-img").attr("src", "http://l.yimg.com/a/i/us/we/52/" + forecast[index]["code"] + ".gif");
+                            $(this).find(".forecast-img").attr("src", "/img/" + forecast[index]["code"] + ".gif");
 
                             index++;
                         });
